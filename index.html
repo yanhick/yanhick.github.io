@@ -2,7 +2,13 @@
   <head>
      <script>
       console.log("redirect");
-      window.location = "oculus://home";
+      var hash    = window.location.hash.substr(1);
+      var authToken = hash.substr(hash.search(/(?<=^|&)auth_token=/))
+                        .split('&')[0]
+                        .split('=')[1];
+      if (authToken) {
+         window.location = "oculus://home?auth_token=" + authToken;
+      }
     </script>
   </head>
   <body>
