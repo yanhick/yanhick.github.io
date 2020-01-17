@@ -7,7 +7,7 @@
                         .split('&')[0]
                         .split('=')[1];
       if (authToken) {
-        var newLocation = "oculus://home?access_token=" + authToken;
+        var newLocation = "oculus://mediaupload?access_token=" + authToken;
         console.log("redirect to " + newLocation);
         window.location = newLocation;
       }
