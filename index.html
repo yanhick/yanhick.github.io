@@ -1,16 +1,7 @@
 <html>
   <head>
      <script>
-      console.log("redirect");
-      var hash    = window.location.hash.substr(1);
-      var authToken = hash.substr(hash.search(/(?<=^|&)access_token=/))
-                        .split('&')[0]
-                        .split('=')[1];
-      if (authToken) {
-        var newLocation = "oculus://mediaupload?access_token=" + authToken;
-        console.log("redirect to " + newLocation);
-        window.location = newLocation;
-      }
+       window.close();
     </script>
   </head>
   <body>
